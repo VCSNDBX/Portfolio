@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Caviar Dreams;
+  src: url(./assets/fonts/CaviarDreams.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Caviar Dreams;
+  src: url(./assets/fonts/CaviarDreams.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Caviar Dreams;
+  src: url(./assets/fonts/CaviarDreams.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Droid Sans;
+  src: url(./assets/fonts/DroidSans.ttf);
+  font-weight: 400;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family:'Caviar Dreams', 'Droid Sans', sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 8px; border-left: 8px solid #E6ECF8;}
+::-webkit-scrollbar-thumb { background-color: #2240c7;}
