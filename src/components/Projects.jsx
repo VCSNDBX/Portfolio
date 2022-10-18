@@ -3,16 +3,13 @@ import styled from 'styled-components';
 import { project } from '../constants';
 
 const Projects = () => {
-
-
-
   return (
     <Section>
       <Title>PROJECTS</Title>
         <Content>
-        {project.map((item) => {
+        {project.map((item, index) => {
             return (
-                <ProjectCard>
+                <ProjectCard key={index}>
                   <ProjectImg src={item.img} />
                   <ImgOverlay>
                     <CardTitle>{item.title}</CardTitle>

@@ -3,6 +3,7 @@ import { saveAs } from "file-saver";
 import styled from 'styled-components'
 import 'animate.css';
 import { AiOutlineCloudDownload } from "react-icons/ai";
+
 const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -47,7 +48,7 @@ const Hero = () => {
 
   const saveFile = () => {
     saveAs(
-      "/resume/Catapat_Victor_CV.pdf",
+      "/assets/Catapat_Victor_CV.pdf",
       "Catapat, Victor B - CV.pdf"
     );
   }

@@ -1,23 +1,38 @@
-import React from 'react'
-import styled from 'styled-components'
-import { navLinks } from '../constants'
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { navLinks } from '../constants';
 
 const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+        console.log(window.scrollY);
+        if (window.scrollY > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [])
+
   return (
-    <Nav>
-      <Logo href=''>ViC</Logo>
-      <MenuBar>
+    <Nav className={scrolled ? "scrolled": ""}>
+      <Logo href='/'>ViC</Logo>
+      <MenuBar >
         {navLinks.map((item, index) => {
           return (
-            <MenuLink className={item.id} href={item.url} target="_">
-              <img src={item.img} />
+            <MenuLink key={index} className={item.id} href={item.url} target="_">
+              <MenuImg src={item.img} />
             </MenuLink>
           )
         })}
-      </MenuBar>
+        </MenuBar>
     </Nav>
   )
-}
+};
 
 const Nav = styled.div`
   display: flex;
@@ -27,10 +42,6 @@ const Nav = styled.div`
   z-index: 9999;
   width: 100%;
   transition:  0.32s ease-in-out;
-
-  scrolled {
-    background-color: #131b2e;
-  }
 `;
 
 const Logo = styled.a`
@@ -78,8 +89,9 @@ const MenuLink = styled.a`
   &:hover::before {
     transform: scale(1);
   }
+`;
 
-  img {
+const MenuImg = styled.img`
     width: 44px;
     height: 44px;
     z-index: 1;
@@ -88,7 +100,6 @@ const MenuLink = styled.a`
     &:hover {
       filter: brightness(0) saturate(100%) invert(21%) sepia(92%) saturate(3134%) hue-rotate(229deg) brightness(79%) contrast(97%);
     }
-  }
 `;
 
 export default NavBar

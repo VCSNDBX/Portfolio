@@ -9,7 +9,7 @@ const Footers = () => {
     <FooterSwish></FooterSwish>
       {navLinks.map((item, index) => {
           return (
-            <FooterLink className={item.id} href={item.url} target="_">
+            <FooterLink key={index} className={item.id} href={item.url} target="_">
               <FooterImg src={item.img} />
             </FooterLink>
           )
