@@ -227,7 +227,7 @@ Error generating stack: `+r.message+`
   background-color: #fff;
   color: #141c3a;
   }
-`,xm=()=>j(Cm,{children:j(km,{children:By.map((t,e)=>j(Em,{children:ct(Om,{children:[j(Am,{src:t.imgUrl}),j(Tm,{children:t.title})]},e)}))})}),Cm=W.section`
+`,xm=()=>j(Cm,{children:j(km,{children:By.map((t,e)=>j(Em,{children:ct(Om,{children:[j(Am,{src:t.imgUrl}),j(Tm,{children:t.title})]})},e))})}),Cm=W.section`
   padding: 0 3rem;
   padding-top: 1rem;
   position: relative;
@@ -248,7 +248,18 @@ Error generating stack: `+r.message+`
   justify-content: center;
   align-items: center;
   padding: 1rem 1rem;
-  width: 110px;
+
+  @media screen and (max-width: 800px) {
+    width: 110px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 130px;
+  }
+
+  @media screen and (max-width: 1900px) {
+    width: 25%;
+  }
 `,Om=W.div`
   display: flex;
   position: relative;
