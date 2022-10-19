@@ -14,7 +14,6 @@ const App = () => (
 );
 
 const Container = styled.div`
-  height: 100vh;
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;

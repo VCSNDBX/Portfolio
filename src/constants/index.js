@@ -1,4 +1,4 @@
-import {github, linkedin, email, victor, html, css, js, bs, react, tw, ionic, vue, kaento, sndbxdsgn, aoc, sandbox, juanstore, } from '../assets/images'
+import {github, linkedin, email, victor, html, css, js, bs, react, tw, ionic, vue, kaento, sndbxdsgn, aoc, sandbox, juanstore, sql, wordpress, git, csharp, } from '../assets/images'
 export const navLinks = [
   {
       title: "Github",
@@ -40,24 +40,40 @@ export const skill = [
     imgUrl: js,
   },
   {
-    title: "Bootstrap",
-    imgUrl: bs,
+    title: "Tailwind",
+    imgUrl: tw,
   },
   {
-      title: "React",
-      imgUrl: react,
+    title: "Bootstrap",
+    imgUrl: bs,
   },
   {
       title: "Ionic",
       imgUrl: ionic,
   },
   {
+      title: "React",
+      imgUrl: react,
+  },
+  {
     title: "Vue",
     imgUrl: vue,
   },
   {
-    title: "Tailwind",
-    imgUrl: tw,
+    title: "C#",
+    imgUrl: csharp,
+  },
+  {
+    title: "Git",
+    imgUrl: git,
+  },
+  {
+    title: "SQL",
+    imgUrl: sql,
+  },
+  {
+    title: "Wordpress",
+    imgUrl: wordpress,
   },
 ];
 

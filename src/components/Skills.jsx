@@ -9,9 +9,11 @@ const Skills = () => {
       {
         skill.map((skill, index) => {
             return (
-                <SkillCard key={index} >
+                <SkillCard>
+                  <SkillItems key={index} >
                     <SkillImg src={skill.imgUrl} />
                     <SkillTitle>{skill.title}</SkillTitle>
+                  </SkillItems>
                 </SkillCard>
             )
         })
@@ -31,24 +33,31 @@ const Section = styled.section`
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin-top: -9rem;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px #ced4da;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
 `;
 
 const SkillCard = styled.div`
   display: flex;
-  flex: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  width: 110px;
+`;
+
+const SkillItems = styled.div`
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  padding: 1rem 0;
 `;
 
 const SkillImg = styled.img`

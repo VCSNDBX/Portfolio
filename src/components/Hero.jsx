@@ -48,7 +48,7 @@ const Hero = () => {
 
   const saveFile = () => {
     saveAs(
-      "/assets/Catapat_Victor_CV.pdf",
+      "/resume/Catapat_Victor_CV.pdf",
       "Catapat, Victor B - CV.pdf"
     );
   }

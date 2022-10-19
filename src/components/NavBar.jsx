@@ -7,7 +7,6 @@ const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-        console.log(window.scrollY);
         if (window.scrollY > 50) {
             setScrolled(true);
         } else {
@@ -15,11 +14,13 @@ const NavBar = () => {
         }
     }
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [])
 
   return (
-    <Nav className={scrolled ? "scrolled": ""}>
+    <Nav className={scrolled ? "scrolled": ''}>
       <Logo href='/'>ViC</Logo>
       <MenuBar >
         {navLinks.map((item, index) => {
@@ -42,6 +43,11 @@ const Nav = styled.div`
   z-index: 9999;
   width: 100%;
   transition:  0.32s ease-in-out;
+
+  &.scrolled {
+  padding: .30rem 0;
+  background: #131b2e;
+  }
 `;
 
 const Logo = styled.a`

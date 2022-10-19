@@ -17,6 +17,11 @@ import kaento from "./kaento.jpg";
 import aoc from "./coco.jpg";
 import sandbox from "./LogoSandbox.png";
 import juanstore from "./JuanStore.jpg";
+import git from "./git.svg";
+import csharp from "./c-sharp-c.svg";
+import wordpress from "./wordpress.svg";
+import sql from "./sql.svg";
+import unity from "./unity-3d.svg";
 
 export {
     logo,
@@ -38,4 +43,9 @@ export {
     aoc,
     sandbox,
     juanstore,
+    git,
+    csharp,
+    wordpress,
+    sql,
+    unity,
 };

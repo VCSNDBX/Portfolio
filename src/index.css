@@ -42,7 +42,3 @@
 
 ::-webkit-scrollbar { width: 8px; border-left: 8px solid #E6ECF8;}
 ::-webkit-scrollbar-thumb { background-color: #2240c7;}
-
-.scrolled {
-  background: #131b2e;
-}
