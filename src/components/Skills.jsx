@@ -9,8 +9,8 @@ const Skills = () => {
       {
         skill.map((skill, index) => {
             return (
-                <SkillCard>
-                  <SkillItems key={index} >
+                <SkillCard key={index}>
+                  <SkillItems>
                     <SkillImg src={skill.imgUrl} />
                     <SkillTitle>{skill.title}</SkillTitle>
                   </SkillItems>
@@ -48,7 +48,18 @@ const SkillCard = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem 1rem;
-  width: 110px;
+
+  @media screen and (max-width: 800px) {
+    width: 110px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 130px;
+  }
+
+  @media screen and (max-width: 1900px) {
+    width: 25%;
+  }
 `;
 
 const SkillItems = styled.div`
